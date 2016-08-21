@@ -13,7 +13,7 @@ Repos agregados:
 * `git git submodule init`
 * `git submodule update`
 
-Descripcion de ficheros y directorios:
+Descripción de ficheros y directorios:
 -----------------
 
 Nombre | Descripcion
@@ -25,7 +25,7 @@ spin-kickstarts | Directorio con los .ks oficiales de Fedora
 TODO.txt | Lo que nos falta hacer
 
 
-¿Como armo mi iso?
+¿Cómo armo mi iso?
 -----------------
 * `./preparar-enviroment.sh`
 
@@ -35,5 +35,6 @@ Luego el __livecreator-tool__ va a descargar todos los paquetes necesarios para
 instalarla dentro del sistema que estamos generando. Hay que tener en cuenta que
 los paquetes se descargaran en __directorio-actual/live__, así que asegurate de tener
 suficiente capacidad.
+Si tenes intencion de seguir laburando conviene que no borres ese directorio, asi la proxima vez no vas a tener que descargar todos los paquetes de nuevo.
 
 La iso se genera en el directorio donde se ejecuta el script.
