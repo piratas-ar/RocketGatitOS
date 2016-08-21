@@ -1,0 +1,18 @@
+Quitar:
+    - Driver del multipath (si es posible)
+    - firewire
+    - Raid
+
+Bugs:
+    - Cryptkeeper esta en ingles
+    - Hardering -> https://github.com/CentOS/Community-Kickstarts/blob/master/secure-kickstart.cfg
+
+Agregar:
+    - Herramienta de backup
+    - Herramienta para borrado seguro (bleachbit?)
+    - Faltan paquetes y plugins -> https://github.com/fauno/remaster-blaster/blob/master/hackmenta/makementa
+
+Miscelaneo:
+    - Sacar listado de los paquetes a insalar\
+      https://git.fedorahosted.org/cgit/spin-kickstarts.git/tree/tools/list-packages-for-ks.py?h=f21
+
