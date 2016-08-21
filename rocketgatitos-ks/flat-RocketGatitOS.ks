@@ -4,13 +4,12 @@ xconfig  --startxonboot
 # Keyboard layouts
 keyboard 'latam'
 # Use network installation
-url --mirrorlist="https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&arch=$basearch"
+url --mirrorlist="https://mirrors.fedoraproject.org/metalink?repo=rawhide&arch=$basearch"
 # System language
 lang es_AR.UTF-8
 # Firewall configuration
 firewall --enabled --service=mdns
-repo --name="fedora" --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&arch=$basearch
-repo --name="updates" --mirrorlist=http://mirrors.fedoraproject.org/metalink?repo=updates-released-f$releasever&arch=$basearch
+repo --name="rawhide" --mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=rawhide&arch=$basearch
 repo --name="RPMFusion Free" --baseurl=http://download1.rpmfusion.org/free/fedora/releases/$releasever/Everything/$basearch/os/
 repo --name="RPMFusion Free - Updates" --baseurl=http://download1.rpmfusion.org/free/fedora/updates/$releasever/$basearch/debug/
 repo --name="RPMFusion Non-Free" --baseurl=http://download1.rpmfusion.org/nonfree/fedora/releases/$releasever/Everything/$basearch/os/
@@ -48,7 +47,7 @@ cat > /etc/rc.d/init.d/livesys << EOF
 # chkconfig: 345 00 99
 # description: Init script for live image.
 ### BEGIN INIT INFO
-# X-Start-Before: display-manager
+# X-Start-Before: display-manager chronyd
 ### END INIT INFO
 
 . /etc/init.d/functions

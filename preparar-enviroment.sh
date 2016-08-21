@@ -4,7 +4,7 @@
 #esta en sudoers ;) -- Happy  Hacking!!
 
 #Paquetes necesarios para hacer el build
-paquetes=(livecd-tools l10n-kickstarts system-config-kickstart fedora-kickstarts rpmfusion-free-remix-kickstarts)
+paquetes=(livecd-tools system-config-kickstart git)
 
 
 
@@ -36,17 +36,17 @@ verificar_paquetes()
     fi
 }
 
-crear_directorios()
+actualizar_submodulos()
 {
-    mkdir -p "${PWD}"/spin-kickstarts
-    cp /usr/share/spin-kickstarts/*.ks "${PWD}"/spin-kickstarts/
+    git submodule init
+    git submodule update
 }
 
 main()
 {
     echo "Configurar entorno para buildear un remix de fedora"
     verificar_paquetes
-    crear_directorios
+    actualizar_submodulos
 
     echo "Es necesario tener desactivado selinux"
     sudo setenforce 0

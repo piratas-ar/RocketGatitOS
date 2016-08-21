@@ -2,8 +2,9 @@ RocketGatitOS
 ============
 
 Repos agregados:
-rpmfusion-free
-rpmfusion-nonfree (solo para unrar)
+-------------
+* rpmfusion-free
+* rpmfusion-nonfree (solo para unrar)
 
 
 ¿Cómo clono este repo?
@@ -18,10 +19,8 @@ Descripcion de ficheros y directorios:
 Nombre | Descripcion
 -------|-----------
 rocketgatitos-ks | Directorio con nuestros propios archivos kickstart
-preparar-enviroment.sh | Verifica que los paquetes necesarios esten instalados,
-si no estan, los instala.
-build.sh | Hace el flat de los .ks y ejecuta el livecreator-tool para armar la
-iso
+preparar-enviroment.sh | Verifica que los paquetes necesarios esten instalados, si no estan, los instala.
+build.sh | Hace el flat de los .ks y ejecuta el livecreator-tool para armar la iso
 spin-kickstarts | Directorio con los .ks oficiales de Fedora
 TODO.txt | Lo que nos falta hacer
 
