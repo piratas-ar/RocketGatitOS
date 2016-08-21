@@ -1,6 +1,17 @@
 RocketGatitOS
 ============
 
+Repos agregados:
+rpmfusion-free
+rpmfusion-nonfree (solo para unrar)
+
+
+¿Cómo clono este repo?
+----------------------
+* `git clone url`
+* `git git submodule init`
+* `git submodule update`
+
 Descripcion de ficheros y directorios:
 -----------------
 
@@ -23,7 +34,7 @@ Aca pasa lo interesante, primero se ejecuta ksflatter que procesa los .ks
 y genera un solo archivo con todo incluido.
 Luego el __livecreator-tool__ va a descargar todos los paquetes necesarios para
 instalarla dentro del sistema que estamos generando. Hay que tener en cuenta que
-los paquetes se descargaran en /var/cache/live, así que asegurate de tener
+los paquetes se descargaran en __directorio-actual/live__, así que asegurate de tener
 suficiente capacidad.
 
 La iso se genera en el directorio donde se ejecuta el script.

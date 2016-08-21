@@ -6,6 +6,18 @@ Quitar:
 Bugs:
     - Cryptkeeper esta en ingles
     - Hardering -> https://github.com/CentOS/Community-Kickstarts/blob/master/secure-kickstart.cfg
+    - Cuando hacemos el build:
+`
+/bin/dracut: line 634: warning: setlocale: LC_MESSAGES: cannot change locale (es_AR.utf8): No such file or directory
+/bin/dracut: line 635: warning: setlocale: LC_CTYPE: cannot change locale (es_AR.utf8): No such file or directory
+dracut: No '/dev/log' or 'logger' included for syslog logging
+dracut: Failed to install module ide_cd
+dracut: Failed to install module ieee1394
+dracut: No '/dev/log' or 'logger' included for syslog logging
+dracut: Failed to install module ide_cd
+dracut: Failed to install module ieee1394
+`
+
 
 Agregar:
     - Herramienta de backup

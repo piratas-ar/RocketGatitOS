@@ -4,7 +4,7 @@
 #esta en sudoers ;) -- Happy  Hacking!!
 
 #Paquetes necesarios para hacer el build
-paquetes=(livecd-tools l10n-kickstarts system-config-kickstart fedora-kickstarts)
+paquetes=(livecd-tools l10n-kickstarts system-config-kickstart fedora-kickstarts rpmfusion-free-remix-kickstarts)
 
 
 
