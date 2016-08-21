@@ -9,23 +9,24 @@ Repos agregados:
 
 ¿Cómo clono este repo?
 ----------------------
-* `git clone url`
-* `git git submodule init`
+* `git clone https://github.com/piratas-ar/RocketGatitOS.git`
+* `git submodule init`
 * `git submodule update`
+
 
 Descripción de ficheros y directorios:
 -----------------
 
-Nombre | Descripcion
+Nombre | Descripción
 -------|-----------
 rocketgatitos-ks | Directorio con nuestros propios archivos kickstart
+spin-kickstarts | Directorio con los .ks oficiales de Fedora (submodulo git)
 preparar-enviroment.sh | Verifica que los paquetes necesarios esten instalados, si no estan, los instala.
 build.sh | Hace el flat de los .ks y ejecuta el livecreator-tool para armar la iso
-spin-kickstarts | Directorio con los .ks oficiales de Fedora
 TODO.txt | Lo que nos falta hacer
 
 
-¿Cómo armo mi iso?
+¿Cómo construyo mi iso?
 -----------------
 * `./preparar-enviroment.sh`
 
