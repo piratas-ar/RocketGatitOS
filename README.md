@@ -29,6 +29,7 @@ TODO.txt | Lo que nos falta hacer
 ¿Cómo construyo mi iso?
 -----------------
 * `./preparar-enviroment.sh`
+* `./build.sh`
 
 Aca pasa lo interesante, primero se ejecuta ksflatter que procesa los .ks
 y genera un solo archivo con todo incluido.
