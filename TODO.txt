@@ -21,7 +21,6 @@ dracut: Failed to install module ieee1394
 
 Agregar:
     - Herramienta de backup
-    - Herramienta para borrado seguro (bleachbit?)
     - Faltan paquetes y plugins -> https://github.com/fauno/remaster-blaster/blob/master/hackmenta/makementa
 
 Miscelaneo:
