@@ -8,9 +8,9 @@ Repos agregados:
 
 ¿Cómo clono este repo?
 ----------------------
-* `git clone https://github.com/piratas-ar/RocketGatitOS.git`
-* `git submodule init`
-* `git submodule update`
+1. `git clone https://github.com/piratas-ar/RocketGatitOS.git`
+1. `git submodule init`
+1. `git submodule update`
 
 
 Descripción de ficheros y directorios:
@@ -27,8 +27,10 @@ TODO.txt | Lo que nos falta hacer
 
 ¿Cómo construyo mi iso?
 -----------------
-* `./preparar-enviroment.sh`
-* `./build.sh`
+Vas a necesitar estar conectadx a internet.
+
+1. `./preparar-enviroment.sh`
+1. `./build.sh`
 
 Aca pasa lo interesante, primero se ejecuta ksflatter que procesa los .ks
 y genera un solo archivo con todo incluido.
@@ -39,3 +41,12 @@ suficiente capacidad.
 Si tenes intencion de seguir laburando conviene que no borres ese directorio, asi la proxima vez no vas a tener que descargar todos los paquetes de nuevo.
 
 La iso se genera en el directorio donde se ejecuta el script.
+
+
+¿Cómo pruebo la imagen?
+-----------------------
+
+Si solo te interesa probar el live lo que podes hacer es
+`qemu-kvm -m 1024 -vga qxl -cdrom RocketGatitOS*.iso`
+
+Para instalar podes usar virt-manager, caja u otro administrador de maquinas virtuales.
