@@ -9,6 +9,7 @@
 %include spin-kickstarts/fedora-live-cinnamon.ks
 %include RocketGatitOS-packages.ks
 %include duraskel.ks
+%include mozilla.ks
 
 # Incluimos los repos de rpmfusion-free, los non-free se agregan instalando el paquete
 # RPMFusion
