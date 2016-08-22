@@ -8,6 +8,8 @@
 
 %include spin-kickstarts/fedora-live-cinnamon.ks
 %include RocketGatitOS-packages.ks
+%include duraskel.ks
+
 # Incluimos los repos de rpmfusion-free, los non-free se agregan instalando el paquete
 # RPMFusion
 repo --name="RPMFusion Free" --baseurl=http://download1.rpmfusion.org/free/fedora/releases/$releasever/Everything/$basearch/os/
@@ -17,8 +19,6 @@ repo --name="RPMFusion Free - Updates" --baseurl=http://download1.rpmfusion.org/
 lang es_AR.UTF-8
 keyboard latam
 timezone Argentina/Buenos_Aires
-
-part / --size=6144
 
 %post --nochroot --log=/root/ks-post-nochroot.log
 # https://github.com/rhinstaller/pykickstart/blob/master/docs/kickstart-docs.rst#example
