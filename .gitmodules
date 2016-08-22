@@ -1,3 +1,6 @@
 [submodule "spin-kickstarts"]
 	path = spin-kickstarts
 	url = https://pagure.io/fedora-kickstarts.git
+[submodule "duraskel"]
+	path = duraskel
+	url = https://github.com/fauno/duraskel.git
