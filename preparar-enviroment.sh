@@ -4,7 +4,7 @@
 #esta en sudoers ;) -- Happy  Hacking!!
 
 #Paquetes necesarios para hacer el build
-paquetes=(livecd-tools system-config-kickstart git)
+paquetes=(livecd-tools system-config-kickstart git rsync)
 
 
 
@@ -13,12 +13,12 @@ verificar_paquetes()
 {
     faltantes=()
     echo "Revisando si los paquetes necesarios estan instalados"
-    for p in "${paquetes[*]}"
+    for p in ${paquetes[*]}
     do
-        rpm -q $p > /dev/null
+        rpm -q "${p}" > /dev/null
         if [ $? -ne 0 ]; then
             #Los pquetes que flatan los agrego al array para luego instalarlos
-            echo ${p}": Falta"
+            echo "${p}"": Falta"
             faltantes=("${faltantes[*]}" ${p})
         fi
     done
