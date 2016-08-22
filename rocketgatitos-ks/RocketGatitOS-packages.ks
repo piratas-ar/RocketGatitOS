@@ -33,6 +33,7 @@ brasero
 unetbootin
 seahorse
 p7zip
+unar
 vlc
 
 # Privacidad
