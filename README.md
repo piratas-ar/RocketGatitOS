@@ -4,7 +4,6 @@ RocketGatitOS
 Repos agregados:
 -------------
 * rpmfusion-free
-* rpmfusion-nonfree (solo para unrar)
 
 
 ¿Cómo clono este repo?
