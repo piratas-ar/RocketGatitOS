@@ -1,21 +1,20 @@
-# nombre_del_archivo.ks
+# duraskel.ks
 #
 # Description:
-# - Descripcion de lo que hace este .ks
+# - Copia las configs de duraskel
 #
 # Maintainer(s):
-# - nick <nick@dominio.com>
+# - kaze <kaze@partidopirata.com.ar>
 
 
 
-%post --nochroot --log=/root/ks-post-duraskel.log
+%post --nochroot --log=/root/ks-post-firefox.log
 # Esto es fuera del chroot, asi que sirve para copiar archivos dentro de la instalacion.
 # Como usamos el livecd-creator la ruta de la instalacion es $INSTALL_ROOT
     duraskel="../duraskel"
 
     chmod 700 ${duraskel}/src/.ssh ${duraskel}/src/.gnupg
-    chmod 600 ${duraskel}/src/.ssh/authorized_keys ${duraskel}/src/.gnupg/*
-
+    chmod 600 -R ${duraskel}/src/.ssh/authorized_keys ${duraskel}/src/.gnupg
 
 	rsync -av ${duraskel}/src/ ${INSTALL_ROOT}/etc/skel/
 
