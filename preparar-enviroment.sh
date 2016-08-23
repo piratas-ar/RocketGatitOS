@@ -48,7 +48,7 @@ main()
     verificar_paquetes
     actualizar_submodulos
 
-    echo "Es necesario tener desactivado selinux"
+    echo "Desactivando SElinux (No te olvides de volver a activarlo cuando termines de laburar)"
     sudo setenforce 0
 
     echo "Happy Hacking!! :D "
