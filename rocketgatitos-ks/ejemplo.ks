@@ -6,6 +6,9 @@
 # Maintainer(s):
 # - nick <nick@dominio.com>
 
+# Directivas:
+# https://github.com/rhinstaller/pykickstart/blob/master/docs/kickstart-docs.rst
+
 
 
 %post --nochroot --log=/root/ks-post-nochroot.log

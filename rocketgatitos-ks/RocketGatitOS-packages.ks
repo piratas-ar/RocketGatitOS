@@ -13,12 +13,14 @@
 @libreoffice
 libreoffice-langpack-es
 
+#Networking
+NetworkManager-openvpn-gnome
+openvpn
 
 # Internet
 transmission
 pidgin
 pidgin-otr
-hexchat
 firefox
 thunderbird
 torbrowser-launcher
@@ -28,10 +30,10 @@ tor
 owncloud-client
 
 # Utilidades
-gparted
-brasero
+pinentry-gtk
 unetbootin
 seahorse
+gparted
 p7zip
 unar
 vlc
@@ -43,20 +45,20 @@ bleachbit
 keepassx
 
 # Seguridad
-aide
+#aide
 rkhunter
 
 # Diseno
 gimp
 inkscape
 
+# Miscelaneo
 
 # make sure we have a graphical installer
 yumex-dnf
 
 # save some space
 -fedora-icon-theme
--PackageKit*                # we switched to yumex, so we don't need this
 
 # Rebranding
 -fedora-release
