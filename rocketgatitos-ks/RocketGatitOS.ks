@@ -7,14 +7,18 @@
 # - KaZe <Kaze@partidopirata.com.ar>
 
 %include spin-kickstarts/fedora-live-cinnamon.ks
+%include spin-kickstarts/fedora-repo-not-rawhide.ks
 %include RocketGatitOS-packages.ks
 %include duraskel.ks
 %include mozilla.ks
 
-# Incluimos los repos de rpmfusion-free, los non-free se agregan instalando el paquete
 # RPMFusion
 repo --name="RPMFusion Free" --baseurl=http://download1.rpmfusion.org/free/fedora/releases/$releasever/Everything/$basearch/os/
 repo --name="RPMFusion Free - Updates" --baseurl=http://download1.rpmfusion.org/free/fedora/updates/$releasever/$basearch/debug/
+
+# Ring
+#repo --name="Ring $releasever - $basearch - ring" --baseurl=https://dl.ring.cx/ring-nightly/fedora_$releasever
+
 
 # Localizacion
 lang es_AR.UTF-8
@@ -26,6 +30,9 @@ timezone Argentina/Buenos_Aires
 
 # Esto es fuera del chroot, asi que sirve para copiar archivos dentro de la instalacion.
 # Como usamos el livecd-creator la ruta de la instalacion es $INSTALL_ROOT
+
+#Repositorios de ring
+dnf config-manager --add-repo https://dl.ring.cx/ring-nightly/fedora_24/ring-nightly-man.repo
 
 %end
 
