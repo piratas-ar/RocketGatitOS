@@ -1,6 +1,11 @@
 RocketGatitOS
 ============
 
+RocketGatitOS, es una distribucion de gnu/linux basada en Fedora, que trae
+paquetes para comunicarse de manera segura por defeto, tambien complementos para
+el navegador que evitan la publicidad y el rastreo. Configuraciones seguras
+y algunas mejores entre otras cosas.
+
 Repos agregados:
 -------------
 * rpmfusion-free
@@ -19,7 +24,7 @@ Descripción de ficheros y directorios:
 Nombre | Descripción
 -------|-----------
 rocketgatitos-ks | Directorio con nuestros propios archivos kickstart
-spin-kickstarts | Directorio con los .ks oficiales de Fedora (submodulo git)
+spin-kickstarts | Directorio con algunos .ks oficiales de Fedora.
 preparar-enviroment.sh | Verifica que los paquetes necesarios esten instalados, si no estan, los instala.
 build.sh | Hace el flat de los .ks y ejecuta el livecreator-tool para armar la iso
 TODO.txt | Lo que nos falta hacer
