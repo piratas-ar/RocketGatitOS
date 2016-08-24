@@ -14,6 +14,7 @@ Repos agregados:
 ¿Cómo clono este repo?
 ----------------------
 1. `git clone https://github.com/piratas-ar/RocketGatitOS.git`
+1. `cd RocketGatitOS`
 1. `git submodule init`
 1. `git submodule update`
 
