@@ -73,7 +73,7 @@ function install_morcilla_addons() {
   done
 
   find "${INSTALL_ROOT}"/usr/lib64/thunderbird/extensions/ \
-      "${INSTALL_ROOT}"/usr/lib/firefox/browser/extensions/ \
+      "${INSTALL_ROOT}"/usr/lib64/firefox/browser/extensions/ \
       -type d -exec chmod 755 {} \;
 
   find "${INSTALL_ROOT}"/usr/lib64/thunderbird/extensions/ \
