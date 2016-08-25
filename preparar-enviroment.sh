@@ -4,7 +4,7 @@
 #esta en sudoers ;) -- Happy  Hacking!!
 
 #Paquetes necesarios para hacer el build
-paquetes=(livecd-tools system-config-kickstart git rsync)
+paquetes=(livecd-tools system-config-kickstart git rsync xmlstarlet)
 
 
 
