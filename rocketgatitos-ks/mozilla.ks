@@ -40,18 +40,29 @@ morcilla_tb=(
   https://addons.mozilla.org/thunderbird/downloads/latest/minimizetotray-revived/platform:2/addon-12581-latest.xpi
 )
 
+# Retrieve the extension id for an addon from its install.rdf
+# http://kb.mozillazine.org/Determine_extension_ID
+get_extension_id() {
+  unzip -qc $1 install.rdf | xmlstarlet sel \
+        -N rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns# \
+        -N em=http://www.mozilla.org/2004/em-rdf# \
+        -t -v \
+        "//rdf:Description[@about='urn:mozilla:install-manifest']/em:id" ||
+        echo
+}
+
 function download_morcilla_addons() {
-  pushd "${INSTALL_ROOT}"/usr/lib/thunderbird-addons/extensions/
+  pushd "${INSTALL_ROOT}"/usr/lib64/thunderbird/extensions/
   wget -c "${morcilla_tb[@]}"
   popd
 
-  pushd "${INSTALL_ROOT}"/usr/lib/firefox-addons/distribution/extensions/
+  pushd "${INSTALL_ROOT}"/usr/lib64/firefox/browser/extensions/
   wget -c "${morcilla[@]}"
   popd
 }
 
 function install_morcilla_addons() {
-  for i in "${INSTALL_ROOT}"/usr/lib/{thunderbird-addons,firefox-addons/distribution}/extensions/*.xpi; do
+  for i in "${INSTALL_ROOT}"/usr/lib64/{thunderbird,firefox/browser}/extensions/*.xpi; do
     id="$(get_extension_id "$i")"
 
     test -z "$id" && continue
@@ -61,12 +72,12 @@ function install_morcilla_addons() {
     popd
   done
 
-  find "${INSTALL_ROOT}"/usr/lib/thunderbird-addons/extensions/ \
-      "${INSTALL_ROOT}"/usr/lib/firefox-addons/distribution/extensions/ \
+  find "${INSTALL_ROOT}"/usr/lib64/thunderbird/extensions/ \
+      "${INSTALL_ROOT}"/usr/lib/firefox/browser/extensions/ \
       -type d -exec chmod 755 {} \;
 
-  find "${INSTALL_ROOT}"/usr/lib/thunderbird-addons/extensions/ \
-      "${INSTALL_ROOT}"/usr/lib/firefox-addons/distribution/extensions/ \
+  find "${INSTALL_ROOT}"/usr/lib64/thunderbird/extensions/ \
+      "${INSTALL_ROOT}"/usr/lib64/firefox/browser/extensions/ \
       -type f -exec chmod 644 {} \;
 }
 
