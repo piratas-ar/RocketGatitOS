@@ -2,7 +2,7 @@ RocketGatitOS
 ============
 
 RocketGatitOS, es una distribucion de gnu/linux basada en Fedora, que trae
-paquetes para comunicarse de manera segura por defeto, tambien complementos para
+paquetes para comunicarse de manera segura por defecto, tambien complementos para
 el navegador que evitan la publicidad y el rastreo. Configuraciones seguras
 y algunas mejores entre otras cosas.
 
