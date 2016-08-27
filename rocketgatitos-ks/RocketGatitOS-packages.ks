@@ -43,6 +43,7 @@ encfs
 cryptkeeper
 bleachbit
 keepassx
+gnupg2
 
 # Seguridad
 #aide
