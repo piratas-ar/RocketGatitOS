@@ -13,6 +13,8 @@
 @libreoffice
 libreoffice-langpack-es
 
+xorg-x11-drv-evdev
+
 #Networking
 NetworkManager-openvpn-gnome
 openvpn
