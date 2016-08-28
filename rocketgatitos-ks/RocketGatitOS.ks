@@ -7,7 +7,8 @@
 # - KaZe <Kaze@partidopirata.com.ar>
 
 %include spin-kickstarts/fedora-live-cinnamon.ks
-%include RocketGatitOS-packages.ks
+%include paquetes.ks
+%include repositorios.ks
 %include duraskel.ks
 %include mozilla.ks
 
