@@ -123,7 +123,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever
 
 EOF
 
-cat >/etc/yum.repos.d/your.repo <<EOF
+cat >/etc/yum.repos.d/ring.repo <<EOF
 [ring]
 name=Ring $releasever - $basearch - ring
 baseurl=https://dl.ring.cx/ring-nightly/fedora_$releasever

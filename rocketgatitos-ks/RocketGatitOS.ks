@@ -11,6 +11,8 @@
 %include repositorios.ks
 %include duraskel.ks
 %include mozilla.ks
+%include cinnamon-look-and-feel.ks¬
+
 
 # RPMFusion
 repo --name="RPMFusion Free" --baseurl=http://download1.rpmfusion.org/free/fedora/releases/$releasever/Everything/$basearch/os/
