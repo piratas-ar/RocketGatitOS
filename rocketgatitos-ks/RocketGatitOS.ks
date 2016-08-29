@@ -46,6 +46,10 @@ sed -i -e ‘s/Generic release/Rocket GatitOS/g’ /etc/fedora-release /etc/issu
 # Agrega los repos definidos en este .ks a la instalacion
 $yum_config_stanza
 
+# Idioma
+echo "LANG=es_AR.UTF-8" >/etc/default/locale
+echo "LANGUAGE=es_AR:es" >>/etc/default/locale
+
 %end
 
 
