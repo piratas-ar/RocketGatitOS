@@ -20,32 +20,33 @@ NetworkManager-openvpn-gnome
 openvpn
 
 # Internet
-transmission
+firefox
+mumble
+owncloud-client
 pidgin
 pidgin-otr
-firefox
+ring
 thunderbird
-torbrowser-launcher
-mumble
-youtube-dl
 tor
-owncloud-client
+torbrowser-launcher
+transmission
+youtube-dl
 
 # Utilidades
-pinentry-gtk
-unetbootin
-seahorse
 gparted
 p7zip
+pinentry-gtk
+seahorse
 unar
+unetbootin
 vlc
 
 # Privacidad
-encfs
-cryptkeeper
 bleachbit
-keepassx
+cryptkeeper
+encfs
 gnupg2
+keepassx
 
 # Seguridad
 #aide
@@ -64,11 +65,11 @@ yumex-dnf
 -fedora-icon-theme
 
 # Rebranding
--fedora-release
 -fedora-logos
+-fedora-release
 -fedora-release-notes
 
-generic-release
 generic-logos
+generic-release
 generic-release-notes
 %end
