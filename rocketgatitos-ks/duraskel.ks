@@ -14,7 +14,11 @@
     chmod 700 duraskel/src/.ssh duraskel/src/.gnupg
     chmod 600 -R duraskel/src/.ssh/authorized_keys duraskel/src/.gnupg
 
-	rsync -av duraskel/src/ ${INSTALL_ROOT}/etc/skel/
+	rsync -av --exclude 'duraskel/src/.bashrc' duraskel/src/ ${INSTALL_ROOT}/etc/skel/
+
+    # Agregamos el uamsk, por que la config de fedora esta buena
+    echo "umask 027" >> ${INSTALL_ROOT}/etc/skel/.bashrc
+
 
 %end
 
