@@ -147,6 +147,19 @@ repo_gpgcheck=0
 enabled=1
 enabled_metadata=1
 EOF
+
+cat >/etc/yum.repos.d/_copr_heliocastro-hack-fonts.repo <<EOF
+name=Copr repo for hack-fonts owned by heliocastro
+baseurl=https://copr-be.cloud.fedoraproject.org/results/heliocastro/hack-fonts/fedora-$releasever-$basearch/
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://copr-be.cloud.fedoraproject.org/results/heliocastro/hack-fonts/pubkey.gpg
+enabled=1
+enabled_metadata=1
+EOF
+
+#cat >/etc/yum.repos.d/REPONAME.repo <<EOF
+#EOF
 %end
 
 
