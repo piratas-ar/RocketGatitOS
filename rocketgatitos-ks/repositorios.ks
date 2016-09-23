@@ -132,6 +132,21 @@ gpgkey=https://dl.ring.cx/ring.pub.key
 enabled=1
 EOF
 
+# === COPR ===
+
+# USBGUARD
+cat >/etc/yum.repos.d/_copr_mildew-usbguard.repo <<EOF
+[mildew-usbguard]
+name=Copr repo for usbguard owned by mildew
+baseurl=https://copr-be.cloud.fedoraproject.org/results/mildew/usbguard/fedora-$releasever-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://copr-be.cloud.fedoraproject.org/results/mildew/usbguard/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
+EOF
 %end
 
 
