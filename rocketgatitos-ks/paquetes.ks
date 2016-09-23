@@ -51,12 +51,14 @@ keepassx
 # Seguridad
 #aide
 rkhunter
-
+usbguard
+usbguard-applet-qt
 # Diseno
 gimp
 inkscape
 
 # Miscelaneo
+hack-fonts
 
 # make sure we have a graphical installer
 yumex-dnf
