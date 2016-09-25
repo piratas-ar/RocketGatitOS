@@ -21,7 +21,7 @@
 #Importamos la llave gpg
 rpmkeys --import "http://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-24"
 
-cat >/etc/yum.repos.d/rpmfusion-free.repo <<EOF
+cat >/etc/yum.repos.d/rpmfusion-free.repo <<'EOF'
 [rpmfusion-free-rawhide]
 name=RPM Fusion for Fedora Rawhide - Free
 #baseurl=http://download1.rpmfusion.org/free/fedora/development/$basearch/os/
@@ -123,7 +123,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever
 
 EOF
 
-cat >/etc/yum.repos.d/ring.repo <<EOF
+cat >/etc/yum.repos.d/ring.repo <<'EOF'
 [ring]
 name=Ring $releasever - $basearch - ring
 baseurl=https://dl.ring.cx/ring-nightly/fedora_$releasever
@@ -135,7 +135,7 @@ EOF
 # === COPR ===
 
 # USBGUARD
-cat >/etc/yum.repos.d/_copr_mildew-usbguard.repo <<EOF
+cat >/etc/yum.repos.d/_copr_mildew-usbguard.repo <<'EOF'
 [mildew-usbguard]
 name=Copr repo for usbguard owned by mildew
 baseurl=https://copr-be.cloud.fedoraproject.org/results/mildew/usbguard/fedora-$releasever-$basearch/
@@ -148,7 +148,7 @@ enabled=1
 enabled_metadata=1
 EOF
 
-cat >/etc/yum.repos.d/_copr_heliocastro-hack-fonts.repo <<EOF
+cat >/etc/yum.repos.d/_copr_heliocastro-hack-fonts.repo <<'EOF'
 name=Copr repo for hack-fonts owned by heliocastro
 baseurl=https://copr-be.cloud.fedoraproject.org/results/heliocastro/hack-fonts/fedora-$releasever-$basearch/
 skip_if_unavailable=True
@@ -158,7 +158,7 @@ enabled=1
 enabled_metadata=1
 EOF
 
-#cat >/etc/yum.repos.d/REPONAME.repo <<EOF
+#cat >/etc/yum.repos.d/REPONAME.repo <<'EOF'
 #EOF
 %end
 
