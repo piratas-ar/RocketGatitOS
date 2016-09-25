@@ -149,6 +149,7 @@ enabled_metadata=1
 EOF
 
 cat >/etc/yum.repos.d/_copr_heliocastro-hack-fonts.repo <<'EOF'
+[heliocastro-hack-fonts]
 name=Copr repo for hack-fonts owned by heliocastro
 baseurl=https://copr-be.cloud.fedoraproject.org/results/heliocastro/hack-fonts/fedora-$releasever-$basearch/
 skip_if_unavailable=True
