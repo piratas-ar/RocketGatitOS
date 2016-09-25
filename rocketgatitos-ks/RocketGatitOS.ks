@@ -12,6 +12,7 @@
 %include duraskel.ks
 %include mozilla.ks
 %include cinnamon-look-and-feel.ks
+%include politicas_seguridad.ks
 
 
 # RPMFusion
