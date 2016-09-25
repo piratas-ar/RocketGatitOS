@@ -11,15 +11,20 @@
 %include repositorios.ks
 %include duraskel.ks
 %include mozilla.ks
-%include cinnamon-look-and-feel.ks¬
+%include cinnamon-look-and-feel.ks
 
 
 # RPMFusion
 repo --name="RPMFusion Free" --baseurl=http://download1.rpmfusion.org/free/fedora/releases/$releasever/Everything/$basearch/os/
 repo --name="RPMFusion Free - Updates" --baseurl=http://download1.rpmfusion.org/free/fedora/updates/$releasever/$basearch/debug/
-
+#USBGuard
+repo --name="USBGuard copr" --baseurl=https://copr-be.cloud.fedoraproject.org/results/mildew/usbguard/fedora-$releasever-$basearch/
 # Ring
-#repo --name="Ring $releasever - $basearch - ring" --baseurl=https://dl.ring.cx/ring-nightly/fedora_$releasever
+repo --name="Ring $releasever - $basearch - ring" --baseurl=https://dl.ring.cx/ring-nightly/fedora_$releasever
+#Hack fonts
+repo --name="HackFonts copr" --baseurl=https://copr-be.cloud.fedoraproject.org/results/heliocastro/hack-fonts/fedora-$releasever-$basearch/
+
+
 
 
 # Localizacion
