@@ -18,7 +18,7 @@
 
     # Agregamos el uamsk, por que la config de fedora esta buena
     echo "umask 027" >> ${INSTALL_ROOT}/etc/skel/.bashrc
-    cat << EOF >> ${INSTALL_ROOT}/etc/skel/.bashrc
+    cat <<EOF >>${INSTALL_ROOT}/etc/skel/.bashrc
 		man() {
 			env LESS_TERMCAP_mb=$(printf "\e[1;31m") \
 			LESS_TERMCAP_md=$(printf "\e[1;31m") \
@@ -29,8 +29,7 @@
 			LESS_TERMCAP_us=$(printf "\e[1;32m") \
 			man "$@"
 		}
-    EOF
-
+EOF
 
 %end
 
