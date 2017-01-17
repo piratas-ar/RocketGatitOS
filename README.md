@@ -56,3 +56,9 @@ Si solo te interesa probar el live lo que podes hacer es
 `qemu-kvm -m 1024 -vga qxl -cdrom RocketGatitOS*.iso`
 
 Para instalar podes usar virt-manager, caja u otro administrador de maquinas virtuales.
+
+
+¿Che y no necesitan diseños?
+------------------------
+
+¡Más vale! date una vuelta por [ACA!!!](https://github.com/piratas-ar/RocketGatitos-sexyness)
