@@ -1,14 +1,20 @@
 RocketGatitOS
 ============
 
-RocketGatitOS, es una distribucion de gnu/linux basada en Fedora, que trae
-paquetes para comunicarse de manera segura por defecto, tambien complementos para
-el navegador que evitan la publicidad y el rastreo. Configuraciones seguras
-y algunas mejores entre otras cosas.
+RocketGatitOS, es una distribucion de gnu/linux basada en Fedora, la creamos con
+la finalidad de brindar un sistema operativo que cuente desde la instalacion con
+herramientas seguras para la comunicacion diaria, tambien incluimos add-ons para
+el navegador y aplicaciones de uso general.
+
+Si ya tenes Fedora instalada podes fijarte los paquetes que usamos e instalarlos
+en tu maquina. Tambien modificamos algunas configuraciones.
 
 Repos agregados:
 -------------
 * rpmfusion-free
+* Ring (copr)
+* USBGUARD (copr)
+* Heliocastro Hack Fonts (copr)
 
 
 ¿Cómo clono este repo?

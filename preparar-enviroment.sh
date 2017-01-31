@@ -4,7 +4,7 @@
 #esta en sudoers ;) -- Happy  Hacking!!
 
 #Paquetes necesarios para hacer el build
-paquetes=(livecd-tools system-config-kickstart git rsync xmlstarlet)
+paquetes=(livecd-tools fedora-kickstarts mock git rsync xmlstarlet)
 
 
 
@@ -12,20 +12,20 @@ paquetes=(livecd-tools system-config-kickstart git rsync xmlstarlet)
 verificar_paquetes()
 {
     faltantes=()
-    echo "Revisando si los paquetes necesarios estan instalados"
+    echo "Revisando si los paquetes necesarios estan instalados..."
     for p in ${paquetes[*]}
     do
         rpm -q "${p}" > /dev/null
         if [ $? -ne 0 ]; then
             #Los pquetes que flatan los agrego al array para luego instalarlos
-            echo "${p}"": Falta"
-            faltantes=("${faltantes[*]}" ${p})
+            echo "[!] ${p}: falta"
+            faltantes=("${faltantes[*]}" "${p}")
         fi
     done
 
     if [ ${#faltantes[*]} -ne 0 ]; then
         echo "Instalando los paquetes que faltan:"
-        sudo dnf install "${faltantes[*]}"
+        sudo dnf install ${faltantes[*]}
         status=$?
 
         #Si falló aborto y salgo con el status del dnf
@@ -42,11 +42,19 @@ actualizar_submodulos()
     git submodule update
 }
 
+linea()
+{
+    echo -e "\n--------------------------------------------------------------\n"
+}
+
 main()
 {
+    linea
     echo "Configurar entorno para buildear un remix de fedora"
     verificar_paquetes
+    linea
     actualizar_submodulos
+    linea
 
     echo "Desactivando SElinux (No te olvides de volver a activarlo cuando termines de laburar)"
     sudo setenforce 0
