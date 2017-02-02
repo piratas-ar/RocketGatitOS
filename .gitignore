@@ -1,3 +1,5 @@
 live/*
 *.iso
 rocketgatitos-ks/flat-RocketGatitOS.ks
+chroot/*
+resultado/*
