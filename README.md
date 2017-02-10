@@ -44,17 +44,14 @@ Vas a necesitar estar conectadx a internet.
 1. `./preparar-enviroment.sh`
 1. `./build.sh`
 
-Aca pasa lo interesante, primero se ejecuta ksflatter que procesa los .ks
-y genera un solo archivo con todo incluido.
-Luego el __livecreator-tool__ va a descargar todos los paquetes necesarios para
-instalarla dentro del sistema que estamos generando. Hay que tener en cuenta que
-los paquetes se descargaran en __directorio-actual/live__, así que asegurate de tener
-suficiente capacidad.
-Si tenes intencion de seguir laburando conviene que no borres ese directorio, asi la proxima vez no vas a tener que descargar todos los paquetes de nuevo.
-
-La iso se genera en el directorio donde se ejecuta el script.
-
-
+He aquí la mismisima magia, el segundo script lo que hace es crear un ambiente
+(chroot) para armar la iso.
+Este chroot se crea por defecto en `/var/lib/mock/`, si queres que se cree en
+otra ubicaciones tenes que editar `fedora-25-x86_64.cfg` que esta en la carpeta
+base del proyecto y editar la linea
+`
+config_opts['basedir'] =  '/ruta/completa/al/chroot/'
+`
 ¿Cómo pruebo la imagen?
 -----------------------
 
