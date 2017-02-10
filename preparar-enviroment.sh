@@ -7,7 +7,7 @@
 paquetes_sistema=(lorax nosync pykickstart mock git rsync)
 
 # Necesarios para hacer el build
-paquetes_mock=(pungi fedora-kickstarts)
+paquetes_mock="pungi fedora-kickstarts lorax-lmc-novirt"
 
 # Ruta de la configuracion de mock
 mock_config="./fedora-25-x86_64.cfg"
@@ -58,6 +58,8 @@ chrooting()
 
     mock_instalar_paquetes
 
+    # creamos los directorios adentro del chroot
+    mock -r ${mock_config} --shell "mkdir -p /result/ /usr/share/rocketgatitos-kickstart/"
     linea
 }
 
@@ -67,6 +69,7 @@ mock_instalar_paquetes()
     echo "Instalando paquetes dentro del chroot"
     mock -r ${mock_config} --install "${paquetes_mock}"
 }
+
 
 actualizar_submodulos()
 {
