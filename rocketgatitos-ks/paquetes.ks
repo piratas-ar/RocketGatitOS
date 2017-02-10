@@ -43,7 +43,7 @@ vlc
 
 # Privacidad
 bleachbit
-cryptkeeper
+#cryptkeeper
 encfs
 gnupg2
 keepassx
